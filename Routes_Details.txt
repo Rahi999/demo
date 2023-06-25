@@ -1,0 +1,50 @@
+### All Routes Name
+
+### Auth
+Signup -->>   /users/signup(POST)
+Login -->>    /users/signin(POST)
+getDemo -->>  /users/secure/getDemoDatas(GET)
+postDemo -->> /users/secure/postDemoDatas(POST)
+
+### Follow
+Follow a user   -->>  /user/follow/:userId(PUT)
+
+## Unfollow
+Unfollow a user -->> /user/unfollow/:userId(PUT)
+
+
+### User profile
+
+getUsers -->>          /profile/getAllUsers(GET)
+getSingleUser -->>     /profile/getSingleUser/:userId(GET)
+editASingleUser -->>   /profile/editUserProfile/:id(PATCH)
+deleteUsers -->>       /profile/delete/:id(DELETE)
+
+### Post
+
+getPosts  -->>        /post/get(GET)
+createPosts -->>      /post/create(POST)
+addComment  -->>      /post/comment(PUT reuqest)(PUT)
+
+### Find users
+Search users -->>     /profile/search/name(POST)
+
+### Stories 
+Create_Story  -->>   /story/create
+Get_stories   -->>   /story/getAll
+
+### Overall work status
+ *FEATURE                 *STATUS               *WORKING
+ Signup         ->        Done                    Yes 
+ Login          ->        Done                    Yes
+ Create_Post    ->        Done                    Yes
+ Get_Post       ->        Done                    Yes
+ Comments       ->        Done                    Yes   
+ Follow         ->        Done                    Yes
+ UnFollow       ->        Done                    Yes
+ Search         ->        Done                    Yes
+ Like_Post      ->        Done                    Yes
+ DisLike_Post   ->        Done                    Yes
+ Share_Post     ->        Not Done
+ Create_story   ->        Done                    Yes
+ Get_stories    ->        Done                    Yes         
