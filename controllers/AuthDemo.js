@@ -4,9 +4,9 @@ const jwt = require("jsonwebtoken")
 require('dotenv').config()
 
 const postDemoData = async (req, res) => {
-    const {firstname, email, password} = req.body; 
+    const {firstname, email, password, phone} = req.body; 
     try{
-        if(!firstname || !email || !password) {
+        if(!firstname || !email || !password || !phone) {
             return res.status(403).json({message: "All fields are required!!"})
         }else {
             const demoData = new authdemoModel({...req.body})

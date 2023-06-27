@@ -9,6 +9,7 @@ const {followRouter} = require("./routes/Follow");
 const {postRouter} = require("./routes/Post")
 const {storyRouter} = require("./routes/story")
 const { chatRouter } = require("./routes/Chat")
+const { otpRouter } = require("./routes/otpAuth")
 app.use(express.json())
 app.use(cors({
     origin: "*"
@@ -20,6 +21,7 @@ app.get("/", ( req, res ) => {
     res.send("Welcome to FB home route")
 })
 app.use("/users", userRouter)
+app.use("/otp", otpRouter)
 app.use("/profile", profileRouter)
 app.use("/user", followRouter)
 app.use("/post", postRouter)
@@ -35,4 +37,4 @@ app.listen(process.env.PORT, async() => {
             console.log("Something went wrong",error);
     }
     console.log(`Server running at port ${process.env.PORT}`)
-})
+});
